@@ -1,0 +1,7 @@
+<h1 class="text-center p-5 font-weight-light text-success">孕育问题产生器</h1> 
+<div class="row justify-content-center p-3">
+    <%= form_tag("/parsing", method: "get", class: 'form-inline') do %>
+      <%= text_field_tag :word, nil, placeholder: '输入关键字即可', class: 'form-control-lg mr-3' %>
+      <%= submit_tag("Search", class: 'btn btn-outline-success mr-3') %>
+    <% end %>
+</div>

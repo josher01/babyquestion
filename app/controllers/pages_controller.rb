@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  def home
+  end
+  
   def parse
     # 百度搜索的关键字，可修改
     @keyword = "宝宝" + params[:word].to_s
