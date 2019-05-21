@@ -118,7 +118,7 @@ class PagesController < ApplicationController
       else
         item.text
       end
-    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!')}
+    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!') || item.include?('宝宝')}
     
     search_form.field_with(:name => "wd").value = @keyword1 + sentence_type[1]
     search_results = agent.submit search_form
@@ -133,7 +133,7 @@ class PagesController < ApplicationController
       else
         item.text
       end
-    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!')}
+    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!') || item.include?('宝宝')}
     
     search_form.field_with(:name => "wd").value = @keyword1 + sentence_type[2]
     search_results = agent.submit search_form
@@ -148,7 +148,7 @@ class PagesController < ApplicationController
       else
         item.text
       end
-    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!')}
+    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!')|| item.include?('宝宝')}
     
     search_form.field_with(:name => "wd").value = @keyword1 + sentence_type[3]
     search_results = agent.submit search_form
@@ -163,7 +163,7 @@ class PagesController < ApplicationController
       else
         item.text
       end
-    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!') }
+    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!') || item.include?('宝宝')}
     
     search_form.field_with(:name => "wd").value = @keyword + sentence_type[4]
     search_results = agent.submit search_form
@@ -178,7 +178,7 @@ class PagesController < ApplicationController
       else
         item.text
       end
-    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!') }
+    end.reject { |item| item.length < 7 || item.length > 13 || item.include?('【') || item.include?('!') || item.include?('宝宝')}
     
     @list_mom = (@list_m1 + @list_m2 + @list_m3 + @list_m4 + @list_m5).uniq
 
