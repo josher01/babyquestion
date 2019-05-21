@@ -1,0 +1,44 @@
+<h1 class="text-center p-5 font-weight-light text-success">孕育问题产生器</h1> 
+<div class="row justify-content-center p-3">
+    <%= form_tag("/parsing", method: "get", class: 'form-inline') do %>
+      <%= text_field_tag :word, nil, placeholder: '输入关键字即可', class: 'form-control-lg mr-3' %>
+      <%= submit_tag("Search", class: 'btn btn-outline-success mr-3') %>
+    <% end %>
+</div>
+<div class="container"> 
+  <div class="row justify-content-center p-3">
+    <div class="col-md-5 col-sm-12">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+              <th class="text-center">宝宝相关问题</th>
+            </tr>
+        </thead>
+        <tbody>
+          <% @list_baby.each do |list| %>
+              <tr>
+                <td><%= list %></td>
+              </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-2 col-sm-12"></div>
+    <div class="col-md-5 col-sm-12">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+              <th class="text-center">妈妈相关问题</th>
+            </tr>
+        </thead>
+        <tbody>
+          <% @list_mom.each do |list| %>
+              <tr>
+                <td><%= list %></td>
+              </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>  

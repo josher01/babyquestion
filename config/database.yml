@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: fiverrclone_dev
+  pool: 5
+  username: joseph
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: fiverrclone_test
+  pool: 5
+  username: joseph
+  password:
+
+production:
+  adapter: postgresql
+  encoding: Unicode
